@@ -3,24 +3,6 @@ import pandas as pd
 import math
 from pathlib import Path
 
-import os  
-import psycopg2  
-  
-def create_conn():  
-    host = os.getenv('DB_HOST')  
-    user = os.getenv('DB_USER')  
-    pass = os.getenv('DB_PASS')  
-    dbname = os.getenv('DB_NAME')  
-  
-    conn = psycopg2.connect(  
-        host=host,  
-        user=user,  
-        password=pass,  
-        dbname=dbname  
-    )  
-      
-    return conn 
-
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
