@@ -3,12 +3,27 @@ import pandas as pd
 import math
 from pathlib import Path
 
-
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
     page_title='GDP Dashboard',
     page_icon=':earth_americas:', # This is an emoji shortcode. Could be a URL too.
 )
+
+st.markdown("## mySUNI Main Page")
+
+tab1, tab2 = st.tabs(["Summary", "Sessions"])
+
+unique_session_id_count = 13203
+average_unique_session_id_per_user = 4
+with tab1:
+    st.markdown("### Summary (최근 30일)")
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.metric(label="총 접속 수", value = f"{unique_session_id_count:,}")
+    with col2:
+        st.metric(label='인 당 평균 세션 수", value = f"(average_unique_session_id_per_user:,}")
+                  
 
 # -----------------------------------------------------------------------------
 # Declare some useful functions.
