@@ -20,9 +20,9 @@ with tab1:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.metric(label="총 접속 수", value = f"{unique_session_id_count:,}")
+        st.metric(label='인 당 평균 세션 수', value=f"{average_unique_session_id_per_user:,}")
     with col2:
-        st.metric(label='인 당 평균 세션 수", value = f"(average_unique_session_id_per_user:,}")
+        st.metric(label='인 당 평균 세션 수', value = f"(average_unique_session_id_per_user:,}")
                   
 
 # -----------------------------------------------------------------------------
